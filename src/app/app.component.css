@@ -1,0 +1,120 @@
+.example-container {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #555;
+}
+
+.title {
+	color: white;
+	margin-left: 18%;
+	margin-bottom: 50px;
+}
+
+.sidenav {
+	background-color: #3f51b5;
+	width: 15%;
+}
+
+.spacer {
+	flex: 0.5 0 auto;
+}
+
+.hvrbutton:hover:before {
+	background-color: red !important;
+	-webkit-transform: translateX(-49%);
+	transform: translateX(-49%);
+}
+
+.hvrbutton:hover:after {
+	background-color: green !important;
+	-webkit-transform: translateX(49%);
+	transform: translateX(49%);
+}
+
+.search {
+	background-color: honeydew;
+	border-radius: 10px;
+}
+
+.centr {
+	align-items: center;
+	color: white;
+	text-align: center;
+	font-size: x-large;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.centre {
+	align-items: center;
+	text-align: center
+}
+
+.mat-divider {
+	color: whitesmoke;
+	background-color: white;
+}
+
+.div_padding {
+	margin: 10px;
+}
+
+.div_padding {
+	align-self: flex-end;
+}
+
+.whiteBackground {
+	/* background-color: white; */
+	color: white;
+	align-self: center;
+}
+
+.menuButton {
+	width: 15%;
+	min-width: fit-content;
+	height: 90%;
+	font-size: large;
+	margin-right: 10px;
+}
+
+.icon {
+	margin-right: 20px;
+}
+
+.menuStyle {
+	background-color: #3f51b5;
+	color: white;
+}
+
+.closebtn {
+	color: red;
+}
+
+.menuButton:hover {
+	background-color: #b7ccd1
+}
+
+.menuStyle:hover {
+	background-color: #b7ccd1
+}
+
+
+/* .menuButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+
+mat-list-item {
+	margin-bottom: 20px;
+}
+
+.centrdiv {
+	align-items: center;
+	width: 90%;
+	height: 50px;
+	background-color: white;
+	margin: 20px;
+	border-radius: 30px;
+	text-align: center;
+	margin-top: 10%;
+}

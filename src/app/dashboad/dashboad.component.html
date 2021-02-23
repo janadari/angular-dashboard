@@ -1,0 +1,79 @@
+<p></p>
+<mat-toolbar>
+    <mat-icon class="title_icon">refresh</mat-icon>
+    <h1>Sales Dashboard</h1>
+    <span class="example-spacer"></span>
+    <p><span class="time">{{dateTime | date:' h:mm a'}}</span><span class="date">,{{dateTime | date:'EEEE, MMMM d, y'}}
+        </span>
+    </p>
+    <span class="example-spacer"></span>
+    <mat-icon class="icon">launch</mat-icon>
+    <mat-icon>share</mat-icon>
+</mat-toolbar>
+<!-- added hard coded value for the charts for now (used same data for every charts here)-->
+<p></p>
+<mat-grid-list cols="3" rowHeight="3:1">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-grid-tile-header>
+            <div class="header">
+                <mat-icon>stars</mat-icon>
+                <mat-icon>search</mat-icon>
+                <mat-icon>more_vert</mat-icon>
+            </div>
+        </mat-grid-tile-header>
+        <h1>
+            <mat-icon style="color: green;">bookmark</mat-icon>
+            $1452.7 Mn
+        </h1>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="2">
+        <mat-grid-tile-header>
+            <div class="header">
+                <mat-icon>stars</mat-icon>
+                <mat-icon>search</mat-icon>
+                <mat-icon>more_vert</mat-icon>
+            </div>
+        </mat-grid-tile-header>
+        <ngx-charts-pie-chart [results]="saleData" [legend]="true" [legendTitle]="'Product Sale Report'"
+            [view]="[1000,300]" [labels]="true">
+        </ngx-charts-pie-chart>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="2">
+        <mat-grid-tile-header>
+            <div class="header">
+                <mat-icon>stars</mat-icon>
+                <mat-icon>search</mat-icon>
+                <mat-icon>more_vert</mat-icon>
+            </div>
+        </mat-grid-tile-header>
+        <ngx-charts-line-chart [view]="[500,200]" [results]="data" [xAxis]="true" [scheme]="colorScheme"
+            [showGridLines]="false">
+        </ngx-charts-line-chart>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="3">
+        <mat-grid-tile-header>
+            <div class="header">
+                <mat-icon>stars</mat-icon>
+                <mat-icon>search</mat-icon>
+                <mat-icon>more_vert</mat-icon>
+            </div>
+        </mat-grid-tile-header>
+        <ngx-charts-bar-vertical [view]="[400,500]" [results]="saleData" [xAxisLabel]="'Products'"
+            [legendTitle]="'Product Sale Chart'" [yAxisLabel]="'Sale'" [legend]="true" [showXAxisLabel]="true"
+            [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+        </ngx-charts-bar-vertical>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="2">
+        <mat-grid-tile-header>
+            <div class="header">
+                <mat-icon>stars</mat-icon>
+                <mat-icon>search</mat-icon>
+                <mat-icon>more_vert</mat-icon>
+            </div>
+        </mat-grid-tile-header>
+        <ngx-charts-bar-horizontal [view]="[800,300]" [results]="saleData" [xAxisLabel]="'Products'"
+            [legendTitle]="'Product Sale Chart'" [yAxisLabel]="'Sale'" [legend]="true" [showXAxisLabel]="true"
+            [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+        </ngx-charts-bar-horizontal>
+    </mat-grid-tile>
+</mat-grid-list>
