@@ -7,11 +7,13 @@
         </span>
     </p>
     <span class="example-spacer"></span>
-    <mat-icon class="icon">launch</mat-icon>
+   <a routerLink="/admin" routerLinkActive="active"><mat-icon class="icon">launch</mat-icon></a> 
     <mat-icon>share</mat-icon>
 </mat-toolbar>
+
 <!-- added hard coded value for the charts for now (used same data for every charts here)-->
-<p></p>
+
+<!-- <p></p>
 <mat-grid-list cols="3" rowHeight="3:1">
     <mat-grid-tile [colspan]="1" [rowspan]="1">
         <mat-grid-tile-header>
@@ -28,6 +30,7 @@
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1" [rowspan]="2">
         <mat-grid-tile-header>
+          
             <div class="header">
                 <mat-icon>stars</mat-icon>
                 <mat-icon>search</mat-icon>
@@ -77,3 +80,15 @@
         </ngx-charts-bar-horizontal>
     </mat-grid-tile>
 </mat-grid-list>
+ -->
+
+
+
+
+<!-- embered mongodb dashboad to display charts here -->
+
+
+
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);"
+    width="100%" height="100%"
+    src="https://charts.mongodb.com/charts-project-0-vzfsm/public/dashboards/b657988f-b2a8-4237-b92c-1d8af81bcd2c"></iframe>

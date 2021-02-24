@@ -1,0 +1,84 @@
+<!-- <p></p>
+<mat-toolbar>
+    <h1>Admin Dashboad</h1>
+</mat-toolbar> -->
+
+
+<mat-tab-group animationDuration="2000ms">
+  <mat-tab label="Add New Sale">
+
+    <form class="center-form"[formGroup]="addSaleForm" style="width: 50%;" >
+    <mat-form-field style="width: 100%;" appearance="outline">
+        <mat-label>Product ID</mat-label>
+        <input matInput placeholder="EX:ABC" formControlName="product" required>
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%;" appearance="outline">
+        <mat-label>Customer Name</mat-label>
+        <input matInput placeholder="EX:ABC"  formControlName="customer" required>
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%;" appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="EX:ABC"  formControlName="city" required>
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%;" appearance="outline">
+        <mat-label>Unit Price</mat-label>
+        <input matInput placeholder="EX: 14541"  formControlName="unitprice" required>
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%;" appearance="outline">
+        <mat-label>Quentity</mat-label>
+        <input matInput placeholder="EX:10"  formControlName="quentity" required>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="rightbtn" (click)="addSale()">SAVE SALE DETAILS</button>
+</form>
+  </mat-tab>
+  <mat-tab label="Update Sales Details">
+
+    <form class="center-form"[formGroup]="updateSaleForm" style="width: 50%;" >
+
+        <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>ID</mat-label>
+            <input matInput placeholder="EX:ABC" formControlName="id" required>
+          </mat-form-field>
+    
+          <button mat-raised-button color="primary" class="rightbtn" (click)="findSale()">FIND SALE DETAILS</button>
+
+          <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>Product ID</mat-label>
+            <input matInput placeholder="EX:ABC" formControlName="product" [(ngModel)]="product">
+          </mat-form-field> 
+
+          <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>Customer Name</mat-label>
+            <input matInput placeholder="EX:ABC"  formControlName="customer" [(ngModel)]="customer">
+          </mat-form-field>
+    
+          <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="EX:ABC"  formControlName="city" [(ngModel)]="city">
+          </mat-form-field>
+    
+          <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>Unit Price</mat-label>
+            <input matInput placeholder="EX: 14541"  formControlName="unitprice" [(ngModel)]="unitprice">
+          </mat-form-field>
+    
+          <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>Quentity</mat-label>
+            <input matInput placeholder="EX:10"  formControlName="quentity" [(ngModel)]="quentity">
+          </mat-form-field>
+    
+          <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>Total</mat-label>
+            <input matInput placeholder="EX:1022"  formControlName="total" [(ngModel)]="total">
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" class="rightbtn" (click)="updateSale()">UPDATE SALE DETAILS</button>
+    </form>
+
+  </mat-tab>
+</mat-tab-group>

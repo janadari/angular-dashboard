@@ -1,0 +1,14 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+    margin: 20px;
+  }
+
+  .center-form{
+    padding-top: 10%;
+    margin: 0 auto; 
+    width:90%; 
+}
+
+.rightbtn{
+    float: right;
+}

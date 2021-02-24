@@ -17,15 +17,28 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import { AdminComponent } from './admin/admin.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboadComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+    MatTabsModule,
     AppRoutingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
@@ -39,6 +52,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatMenuModule,
     MatCardModule,
     MatDividerModule,
+    FormsModule,
     MatSelectModule
   ],
   providers: [],
