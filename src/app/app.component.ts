@@ -16,7 +16,7 @@ export interface Tile {
 
 
 export class AppComponent {
-  title = 'ZAPTONALYSIS';
+  title = 'ZEPTOLYTICS';
 
   dataList: string[] = ['Finance','Sales'];
 
